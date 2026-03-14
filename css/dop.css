@@ -1,0 +1,27 @@
+.opacity-header, 
+.opacity-about,
+.project-item-right,
+.project-item-left, 
+.contact-item {
+    opacity: 0;
+    transform: translate3d(0, -150px, 0); 
+    transition: all 1s ease-out;
+}
+
+.opacity-about, 
+.project-item-right {
+    transform: translate3d(150px, 0, 0);
+}
+
+.project-item-left {
+    transform: translate3d(-150px, 0, 0);
+}
+
+.contact-item {
+    transform: translate3d(-150px, -150px, 0);
+}
+
+.visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
