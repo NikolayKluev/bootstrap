@@ -45,8 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
         interval = setInterval(() => {
             if (currentPlaceholder.length < email.length) {
                 currentPlaceholder += email[currentPlaceholder.length];
-                emailAddress.placeholder = currentPlaceholder;
-                console.log(emailAddress.placeholder);
+                emailAddress.placeholder = currentPlaceholder;                
             } else {
                 clearInterval(interval);
             }
