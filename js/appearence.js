@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const projectItemLeft = document.getElementsByClassName('project-item-left');
     const projectItemRight = document.getElementsByClassName('project-item-right');
     const contactItems = [document.getElementsByClassName('contact-item')];
+    const cardBody = [document.getElementsByClassName('card-body')];
 
     let email = emailAddress.placeholder;
     let currentPlaceholder = '';
@@ -50,21 +51,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(interval);
             }
         }, 500);    
-    }
-
-    
+    }    
 
     setVisible(opacityHeader, 200);
 
     window.addEventListener('scroll', () => {
-        appearence(about, opacityAbout, 500);
+        appearence(about, opacityAbout, 200);
         if (isVisible(project)) {
-            setVisible(projectItemLeft, 500);
-            setVisible(projectItemRight, 500);
+            setVisible(projectItemLeft, 200);
+            setVisible(projectItemRight, 200);
         }
         contactItems.forEach(element => {
             appearence(signup, element, 500);
-        });        
+        });      
+        cardBody.forEach(element => {
+            appearence(signup, element, 500);
+        })
         if (isVisible(signup)) fullPlaceholder();        
     });
 });
